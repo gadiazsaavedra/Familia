@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from .views import saludo
+from miembros.views import cargarmiembro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bienvenido/', saludo),
+    path('agregar_miembro/<nombre>/<fecha_nac>/<edad>', cargarmiembro),
 ]
