@@ -3,10 +3,11 @@ from django.template import Template, Context
 from django.shortcuts import render
 
 
-
 def saludo(request):
 
-    misaludo = open('I:/Python/Proyectos/Familia/mifamilia/mifamilia/mifamilia/templates/t1.html')
+    misaludo = open(
+        "mifamilia/templates/t1.html"
+    )
 
     miplantilla = Template(misaludo.read())
 
@@ -17,4 +18,3 @@ def saludo(request):
     documento = miplantilla.render(micontexto)
 
     return HttpResponse(documento)
-
